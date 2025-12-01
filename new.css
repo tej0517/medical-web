@@ -1,0 +1,51 @@
+.doctor-avatars img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #007bff;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.doctor-avatars img:hover {
+  transform: scale(1.1);
+}
+
+.doctor-card {
+  background-color: #f8fcff;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.doctor-card-img {
+  object-fit: cover;
+}
+
+
+.avatar-frame {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #d4edfc 40%, #6bc5f8 60%);
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 6px #58bffc;
+  transition: transform 0.3s ease-in-out;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.avatar-frame:hover {
+  transform: scale(1.1);
+}
+
+.avatar-frame img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+}

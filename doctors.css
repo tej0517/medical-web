@@ -1,0 +1,394 @@
+ 
+        :root {
+            --primary-blue: rgba(0, 71, 115, 1);
+            --light-blue: #4a90a4;
+            --green: #28a745;
+            --light-gray: #f8f9fa;
+        }
+
+
+/* NAVBAR */
+
+/* .navbar{
+    margin-bottom: 2%;
+} */
+.navbar a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+  /* Blur background when navbar is open */
+    .navbar-collapse.show {
+      backdrop-filter: blur(12px);
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    /* Navbar links */
+    .navbar-nav .nav-link {
+      color: rgb(18, 17, 17);
+      font-weight: 500;
+      margin: 5px 0;
+    }
+
+    /* Contact button */
+    .btn-contact {
+    background: rgba(0, 71, 115, 1);
+    border-color: #3498db;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+            transform: translateY(-1px);
+        }
+
+    /* Hide desktop button inside mobile menu */
+    @media (max-width: 991px) {
+      .btn-contact {
+        display: none;
+      }
+      .navbar-collapse.show .btn-contact {
+        display: inline-block;
+        margin-top: 15px;
+      }
+    }
+   /* Custom cross (X) button */
+.toggler-cross {
+    font-size: 2rem;
+  color: black;
+  border: none;
+  background: transparent;
+  line-height: 1;
+}
+
+/* Hamburger (3 lines) color → black */
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Remove border + shadow from hamburger button */
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* navbar end */
+
+
+
+
+
+        /* Banner Section */
+        .banner-section {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 1rem 0;
+            margin-top: 7%;
+        }
+
+        .banner-text {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .breadcrumb-custom {
+            background: none;
+            color: rgba(255,255,255,0.8);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Search Section */
+        .search-section {
+            background-color: var(--primary-blue);
+            padding: 2rem 0;
+            /* margin-top: 2%; */
+        }
+
+        .search-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .search-input {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .search-btn {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.75rem 2rem;
+            font-weight: 500;
+            width: 100%;
+        }
+
+        .search-btn:hover {
+            background-color: var(--light-blue);
+        }
+
+        /* Filter Tags */
+        .filter-section {
+            padding: 1rem 0;
+            background-color: var(--light-gray);
+        }
+
+        .filter-tag {
+            background-color: #e9ecef;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 0.25rem 0.75rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+
+        .filter-tag .close {
+            margin-left: 0.5rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .results-info {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Hospital Cards */
+        .hospital-card {
+             background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+        }
+
+        .hospital-card:hover {
+             transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        }
+
+        .hospital-img {
+            width: 100%;
+  height: 160px; /* bigger for better impact */
+  object-fit: cover;
+        }
+
+        .hospital-info {
+            padding: 1rem;
+        }
+
+        .hospital-name {
+            font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
+        }
+
+        .hospital-location {
+            color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+        }
+
+        .hospital-description {
+           color: #444;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1; /* ensures description takes space but buttons stick to bottom */
+        }
+
+        .hospital-tags {
+            margin-bottom: 1rem;
+        }
+
+        .hospital-tag {
+             background-color: #eef5f9;
+  color: var(--primary-blue);
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  margin: 0.2rem;
+  display: inline-block;
+  font-weight: 500;
+        }
+
+        .hospital-actions {
+           display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+        }
+
+        .btn-book {
+           
+            background: rgba(0, 71, 115, 1);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            flex: 1;
+        }
+
+        .btn-book:hover {
+           background-color: var(--light-blue);
+            color: white;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--green);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            flex: 1;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+        /* Show More Button */
+        .show-more-section {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .btn-show-more {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.75rem 2rem;
+            font-weight: 500;
+        }
+
+        .btn-show-more:hover {
+            background-color: var(--light-blue);
+            color: white;
+        }
+
+        /* Logo placeholder */
+        .logo-placeholder {
+            width: 120px;
+            height: 40px;
+            background-color: var(--primary-blue);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .hospital-actions {
+                flex-direction: column;
+            }
+            
+            .search-card {
+                padding: 1rem;
+            }
+            
+            .hospital-info {
+                padding: 0.75rem;
+            }
+
+    
+        }
+  
+        @media(max-width:500px){
+             .banner-text{
+                margin-top: 25%;
+            }
+        }
+
+        @media(min-width:501px) and (max-width:768px){
+               .banner-text{
+                margin-top: 13%;
+            }
+        }
+
+         @media(min-width:769px) and (max-width:1300px){
+               .banner-text{
+                margin-top: 20%;
+            }
+        }
+
+
+        .doctor-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s ease-in-out;
+}
+.doctor-card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.doctor-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border: 2px solid #eee;
+}
+
+.doctor-name {
+  font-size: 1rem;
+}
+
+.doctor-meta p {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.doctor-desc {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.doctor-actions .btn {
+  font-size: 0.85rem;
+  border-radius: 6px;
+  padding: 6px 12px;
+}
+
+
+@media (max-width:351px){
+    .doctor-actions{
+        display: flex;
+    }
+}
+
+
+  .hospital-actions {
+           display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+        }
